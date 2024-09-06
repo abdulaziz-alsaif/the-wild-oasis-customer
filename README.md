@@ -21,5 +21,6 @@
 - Auth.js - Authentication for Next.js
 - Supabase - Open-source Firebase alternative
 
-[Visit Website]()
+[Visit Website](https://the-wild-oasis-customer.vercel.app/)
 
+check out [github](https://github.com/abdulaziz-alsaif/The-Wild-Oasis) of internal employee website to manage The Wild Oasis
