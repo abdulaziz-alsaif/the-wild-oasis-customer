@@ -1,0 +1,81 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* Scrollbar styling */
+  /* For Chrome, EDGE, Others */
+  .scrollbar::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-track {
+    background-color: theme("colors.primary.700");
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb {
+    background-color: theme("colors.primary.200");
+    border-radius: 0.25rem;
+  }
+
+  .scrollbar::-webkit-scrollbar-thumb:hover {
+    background-color: theme("colors.primary.100");
+    border-radius: 0.25rem;
+  }
+
+  /* For Firefox Browser, @-moz-document to stop chrome from using this styles since it support both ways  */
+  @-moz-document url-prefix() {
+    .scrollbar {
+        scrollbar-width: thin;
+        scrollbar-color: theme("colors.primary.200") theme("colors.primary.700");
+      }
+    .scrollbar:hover {
+        scrollbar-color: theme("colors.primary.100") theme("colors.primary.700");
+      }
+    }
+
+  .spinner {
+    margin: 3.2rem auto 1.6rem;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 8px solid theme("colors.primary.900");
+    border-right-color: theme("colors.primary.200");
+    animation: rotate 1s infinite linear;
+  }
+
+  .spinner-mini {
+    margin: 0;
+    width: 20px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    border: 2px solid theme("colors.primary.200");
+    border-right-color: transparent;
+    animation: rotate 1s infinite linear;
+  }
+
+  @keyframes rotate {
+    to {
+      transform: rotate(1turn);
+    }
+  }
+}
+
+/* For data picker https://daypicker.dev/v8/using-daypicker/styling */
+.rdp {
+  --rdp-cell-size: 32px !important;
+  --rdp-accent-color: theme("colors.accent.500") !important;
+  --rdp-background-color: theme("colors.accent.600") !important;
+  margin: 0 !important;
+}
+
+.rdp-dropdown option {
+  background-color: theme("colors.primary.800");
+  color: theme("colors.primary.50");
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+}
