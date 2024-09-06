@@ -3,7 +3,7 @@
 import { useState, useLayoutEffect } from "react";
 
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
-import SidebarLinks from "../account/SidebarLinks";
+import SidebarLinks from "./SidebarLinks";
 
 const SideNavigation = () => {
   const [isOpen, setIsOpen] = useState(false);
